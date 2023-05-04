@@ -1,33 +1,51 @@
 package conv
 
-/*
-  I denne pakken skal alle konverteringfunksjonene
-  implementeres. Bruk engelsk.
-    FarhenheitToCelsius
-    CelsiusToFahrenheit
-    KelvinToFarhenheit
-    ...
-*/
+func FarhenheitToCelsius(fahrenheit float64) float64 {
 
-// Konverterer Farhenheit til Celsius
-func FarhenheitToCelsius(value float64) float64 {
+	celsius := (fahrenheit - 32) * 5 / 9
+
 	// Her skal du implementere funksjonen
 	// Du skal ikke formattere float64 i denne funksjonen
 	// Gjør formattering i main.go med fmt.Printf eller
 	// lignende
-	/*
-	if value == 32 {
-		return 0
-	} else {
-		return 56.67
-	}
-	*/
-	return (value - 32.0)*(5.0/9.0)
-
+	return celsius
 }
 
-// De andre konverteringsfunksjonene implementere her
-// ...
-func CelsiusToFahrenheit(value float64) float64 {
-  return value*(9.0/5.0) + 32
+func FarhenheitToKevlin(Farhenheit float64) float64 {
+
+	Kelvin := (Farhenheit-32)*5/9 + 273.15
+
+	return Kelvin
+}
+
+// //c
+func CelsiusToFarhenheit(Celsius float64) float64 {
+
+	farhrenheit := Celsius*9/5 + 32
+
+	return farhrenheit
+}
+
+func CelsiusToKelvin(Celsius float64) float64 {
+	Kelvin := Celsius + 273.15
+
+	return Kelvin
+}
+
+// k
+func KelvinToCelsius(Kelvin float64) float64 {
+	Celsius := Kelvin - 273.15
+
+	return Celsius
+}
+
+func KelvinToFarhenheit(Kelvin float64) float64 {
+	Farhrenheit := (Kelvin-273.15)*9/5 + 32
+
+	return Farhrenheit
+}
+
+func GetSunTemp() string {
+	return "Temperatur på ytre lag av Solen 5506.85°C.\nTemperatur i 
+Solens kjerne er 15 000 000°C."
 }
