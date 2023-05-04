@@ -16,8 +16,7 @@ var cels float64
 var kel float64
 var temp string
 
-// Bruker init (som anbefalt i dokumentasjonen) for å sikre at 
-flagvariablene
+// Bruker init (som anbefalt i dokumentasjonen) for å sikre at flagvariablene
 // er initialisert.
 func init() {
 
