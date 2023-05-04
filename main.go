@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/Theani33/funtemps/conv"
+	"github.com/vickynygaard/funtemps/conv"
 	"math"
 	"strconv"
 )
