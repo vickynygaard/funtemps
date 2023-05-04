@@ -21,8 +21,7 @@ func withinTolerance(a, b, error float64) bool {
 	difference := math.Abs(a - b)
 
 	// Siden vi skal dele med b, må vi sjekke om den er 0
-	// Hvis b er 0, returner avgjørelsen om d er mindre enn 
-feilmarginen
+	// Hvis b er 0, returner avgjørelsen om d er mindre enn feilmarginen
 	// som vi aksepterer
 	if b == 0 {
 		return difference < error
