@@ -18,8 +18,7 @@ func (ff *FunFacts) GetFunFacts(about string) []string {
 	case "terra":
 		facts = ff.Terra
 	default:
-		facts = []string{"Sorry, I don't have any fun facts about 
-that."}
+		facts = []string{"Sorry, I don't have any fun facts about that."}
 	}
 	return facts
 }
