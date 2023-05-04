@@ -1,6 +1,6 @@
 package conv
 
-func FarhenheitToCelsius(fahrenheit float64) float64 {
+func FahrenheitToCelsius(fahrenheit float64) float64 {
 
 	celsius := (fahrenheit - 32) * 5 / 9
 
@@ -11,19 +11,19 @@ func FarhenheitToCelsius(fahrenheit float64) float64 {
 	return celsius
 }
 
-func FarhenheitToKevlin(Farhenheit float64) float64 {
+func FahrenheitToKelvin(Fahrenheit float64) float64 {
 
-	Kelvin := (Farhenheit-32)*5/9 + 273.15
+	Kelvin := (Fahrenheit-32)*5/9 + 273.15
 
 	return Kelvin
 }
 
 // //c
-func CelsiusToFarhenheit(Celsius float64) float64 {
+func CelsiusToFahrenheit(Celsius float64) float64 {
 
-	farhrenheit := Celsius*9/5 + 32
+	fahrenheit := Celsius*9/5 + 32
 
-	return farhrenheit
+	return fahrenheit
 }
 
 func CelsiusToKelvin(Celsius float64) float64 {
@@ -39,10 +39,10 @@ func KelvinToCelsius(Kelvin float64) float64 {
 	return Celsius
 }
 
-func KelvinToFarhenheit(Kelvin float64) float64 {
-	Farhrenheit := (Kelvin-273.15)*9/5 + 32
+func KelvinToFahrenheit(Kelvin float64) float64 {
+	Fahrenheit := (Kelvin-273.15)*9/5 + 32
 
-	return Farhrenheit
+	return Fahrenheit
 }
 
 func GetSunTemp() string {
