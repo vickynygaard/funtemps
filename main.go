@@ -49,32 +49,23 @@ func main() {
 	flag.Parse()
 
 	/**
-	    Her må logikken for flaggene og kall til funksjoner fra conv 
-og funfacts
-	    pakkene implementeres.
+	    Her må logikken for flaggene og kall til funksjoner fra conv og funfacts pakkene implementeres.
 
-	    Det er anbefalt å sette opp en tabell med alle mulige 
-kombinasjoner
-	    av flagg. flag-pakken har funksjoner som man kan bruke for å 
-teste
-	    hvor mange flagg og argumenter er spesifisert på 
-kommandolinje.
+	    Det er anbefalt å sette opp en tabell med alle mulige kombinasjoner
+	    av flagg. flag-pakken har funksjoner som man kan bruke for å teste
+	    hvor mange flagg og argumenter er spesifisert på kommandolinje.
 
 	        fmt.Println("len(flag.Args())", len(flag.Args()))
 			    fmt.Println("flag.NFlag()", flag.NFlag())
 
-	    Enkelte kombinasjoner skal ikke være gyldige og da må 
-kontrollstrukturer
+	    Enkelte kombinasjoner skal ikke være gyldige og da må kontrollstrukturer
 	    brukes for å utelukke ugyldige kombinasjoner:
-	    -F, -C, -K kan ikke brukes samtidig
-	    disse tre kan brukes med -out, men ikke med -funfacts
+	    -F, -C, -K kan ikke brukes samtidig disse tre kan brukes med -out, men ikke med -funfacts
 	    -funfacts kan brukes kun med -t
 	    ...
-	    Jobb deg gjennom alle tilfellene. Vær obs på at det er en del 
-sjekk
+	    Jobb deg gjennom alle tilfellene. Vær obs på at det er en del sjekk
 	    implementert i flag-pakken og at den vil skrive ut "Usage" med
-	    beskrivelsene av flagg-variablene, som angitt i parameter fire 
-til
+	    beskrivelsene av flagg-variablene, som angitt i parameter fire til
 	    funksjonene Float64Var og StringVar
 	*/
 
@@ -91,15 +82,12 @@ til
 		celsius := conv.FarhenheitToCelsius(fahr)
 		if celsius == math.Trunc(celsius) {
 			celsiusInt := int(celsius)
-			celsiusStr := strconv.FormatInt(int64(celsiusInt), 
-10)
+			celsiusStr := strconv.FormatInt(int64(celsiusInt), 10)
 
 			// Insert thousands separator
 			if len(celsiusStr) > 3 {
-				thousands := 
-celsiusStr[:len(celsiusStr)-3]
-				remainder := 
-celsiusStr[len(celsiusStr)-3:]
+				thousands := celsiusStr[:len(celsiusStr)-3]
+				remainder := celsiusStr[len(celsiusStr)-3:]
 				celsiusStr = thousands + " " + remainder
 			}
 
@@ -112,15 +100,12 @@ celsiusStr[len(celsiusStr)-3:]
 		celsius := conv.KelvinToCelsius(kel)
 		if celsius == math.Trunc(celsius) {
 			celsiusInt := int(celsius)
-			celsiusStr := strconv.FormatInt(int64(celsiusInt), 
-10)
+			celsiusStr := strconv.FormatInt(int64(celsiusInt), 10)
 
 			// Insert thousands separator
 			if len(celsiusStr) > 3 {
-				thousands := 
-celsiusStr[:len(celsiusStr)-3]
-				remainder := 
-celsiusStr[len(celsiusStr)-3:]
+				thousands := celsiusStr[:len(celsiusStr)-3]
+				remainder := celsiusStr[len(celsiusStr)-3:]
 				celsiusStr = thousands + " " + remainder
 			}
 
@@ -133,45 +118,34 @@ celsiusStr[len(celsiusStr)-3:]
 		farhenheit := conv.CelsiusToFarhenheit(cels)
 		if farhenheit == math.Trunc(farhenheit) {
 			farhenheitInt := int(farhenheit)
-			farhenheitStr := 
-strconv.FormatInt(int64(farhenheitInt), 10)
+			farhenheitStr := strconv.FormatInt(int64(farhenheitInt), 10)
 
 			// Insert thousands separator
 			if len(farhenheitStr) > 3 {
-				thousands := 
-farhenheitStr[:len(farhenheitStr)-3]
-				remainder := 
-farhenheitStr[len(farhenheitStr)-3:]
-				farhenheitStr = thousands + " " + 
-remainder
+				thousands := farhenheitStr[:len(farhenheitStr)-3]
+				remainder := farhenheitStr[len(farhenheitStr)-3:]
+				farhenheitStr = thousands + " " + remainder
 			}
 
-			fmt.Printf("%.2f °C er %s °F.", cels, 
-farhenheitStr)
+			fmt.Printf("%.2f °C er %s °F.", cels, farhenheitStr)
 		} else {
-			fmt.Printf("%.2f °C er %.2f °F.", cels, 
-farhenheit)
+			fmt.Printf("%.2f °C er %.2f °F.", cels, farhenheit)
 		}
 
 	} else if out == "F" && isFlagPassed("K") {
 		farhenheit := conv.KelvinToFarhenheit(kel)
 		if farhenheit == math.Trunc(farhenheit) {
 			farhenheitInt := int(farhenheit)
-			farhenheitStr := 
-strconv.FormatInt(int64(farhenheitInt), 10)
+			farhenheitStr := strconv.FormatInt(int64(farhenheitInt), 10)
 
 			// Insert thousands separator
 			if len(farhenheitStr) > 3 {
-				thousands := 
-farhenheitStr[:len(farhenheitStr)-3]
-				remainder := 
-farhenheitStr[len(farhenheitStr)-3:]
-				farhenheitStr = thousands + " " + 
-remainder
+				thousands := farhenheitStr[:len(farhenheitStr)-3]
+				remainder := farhenheitStr[len(farhenheitStr)-3:]
+				farhenheitStr = thousands + " " + remainder
 			}
 
-			fmt.Printf("%.2f °K er %s °F.", kel, 
-farhenheitStr)
+			fmt.Printf("%.2f °K er %s °F.", kel, farhenheitStr)
 		} else {
 			fmt.Printf("%.2f °K er %.2f °F.", kel, farhenheit)
 		}
@@ -180,8 +154,7 @@ farhenheitStr)
 		kelvin := conv.CelsiusToKelvin(cels)
 		if kelvin == math.Trunc(kelvin) {
 			kelvinInt := int(kelvin)
-			kelvinStr := strconv.FormatInt(int64(kelvinInt), 
-10)
+			kelvinStr := strconv.FormatInt(int64(kelvinInt), 10)
 
 			// Insert thousands separator
 			if len(kelvinStr) > 3 {
@@ -199,8 +172,7 @@ farhenheitStr)
 		kelvin := conv.FarhenheitToKevlin(fahr)
 		if kelvin == math.Trunc(kelvin) {
 			kelvinInt := int(kelvin)
-			kelvinStr := strconv.FormatInt(int64(kelvinInt), 
-10)
+			kelvinStr := strconv.FormatInt(int64(kelvinInt), 10)
 
 			// Insert thousands separator
 			if len(kelvinStr) > 3 {
@@ -216,23 +188,18 @@ farhenheitStr)
 		}
 	}
 
-	if temp == "C" && isFlagPassed("funfacts") && funfacts != "luna" 
-&& funfacts != "terra" {
+	if temp == "C" && isFlagPassed("funfacts") && funfacts != "luna" && funfacts != "terra" {
 		fmt.Print("Temperatur på ytre lag av Solen 5506.85°C.\n")
 		fmt.Print("Temperatur i Solens kjerne er 15 000 000°C.")
 	}
 
-	if funfacts == "luna" && isFlagPassed("funfacts") && funfacts != 
-"terra" {
-		fmt.Print("Temperatur på Månens overflate om natten 
--183°C\n")
+	if funfacts == "luna" && isFlagPassed("funfacts") && funfacts != "terra" {
+		fmt.Print("Temperatur på Månens overflate om natten -183°C\n")
 		fmt.Print("Temperatur på Månens overflate om dagen 106°C")
 
 	} else if funfacts == "terra" && isFlagPassed("funfacts") {
-		fmt.Println("Høyeste temperatur målt på Jordens overflate 
-134F°")
-		fmt.Println("Laveste temperatur målt på Jordens overflate 
--89.4°C")
+		fmt.Println("Høyeste temperatur målt på Jordens overflate 134F°")
+		fmt.Println("Laveste temperatur målt på Jordens overflate -89.4°C")
 		fmt.Println("Temperatur i Jordens indre kjerne 9392°K")
 
 	}
