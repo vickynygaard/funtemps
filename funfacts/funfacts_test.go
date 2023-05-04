@@ -27,8 +27,7 @@ func TestGetFunFacts(t *testing.T) {
 	for _, tc := range tests {
 		got := ff.GetFunFacts(tc.input)
 		if !reflect.DeepEqual(tc.want, got) {
-			t.Errorf("GetFunFacts(%q) = %v, want %v", 
-tc.input, got, tc.want)
+			t.Errorf("GetFunFacts(%q) = %v, want %v", tc.input, got, tc.want)
 		}
 	}
 }
