@@ -28,7 +28,7 @@ func withinTolerance(a, b, error float64) bool {
 	}
 	return (difference / math.Abs(b)) < error
 }
-func TestFarhenheitToCelsius(t *testing.T) {
+func TestFahrenheitToCelsius(t *testing.T) {
 	type test struct {
 		input float64
 		want  float64
@@ -39,13 +39,13 @@ func TestFarhenheitToCelsius(t *testing.T) {
 	}
 
 	for _, tc := range tests {
-		got := FarhenheitToCelsius(tc.input)
+		got := FahrenheitToCelsius(tc.input)
 		if !withinTolerance(tc.want, got, 1e-4) {
 			t.Errorf("expected: %v, got: %v", tc.want, got)
 		}
 	}
 }
-func TestFahrenheitToKevlin(t *testing.T) {
+func TestFahrenheitToKelvin(t *testing.T) {
 	type test struct {
 		input float64
 		want  float64
@@ -55,7 +55,7 @@ func TestFahrenheitToKevlin(t *testing.T) {
 		{input: 134, want: 329.82},
 	}
 	for _, tc := range tests {
-		got := FarhenheitToKevlin(tc.input)
+		got := FahrenheitToKelvin(tc.input)
 
 		if !withinTolerance(tc.want, got, 1e-4) {
 			t.Errorf("expected: %.18f, got: %.18f", tc.want, 
