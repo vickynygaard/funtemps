@@ -46,6 +46,5 @@ func KelvinToFarhenheit(Kelvin float64) float64 {
 }
 
 func GetSunTemp() string {
-	return "Temperatur på ytre lag av Solen 5506.85°C.\nTemperatur i 
-Solens kjerne er 15 000 000°C."
+	return "Temperatur på ytre lag av Solen 5506.85°C.\nTemperatur i Solens kjerne er 15 000 000°C."
 }
