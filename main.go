@@ -23,19 +23,15 @@ func init() {
 	/*
 	   Her er eksempler på hvordan man implementerer parsing av flagg.
 	   For eksempel, kommando
-	       funtemps -F 0 -out C
-	   skal returnere output: 0°F er -17.78°C
+	       funtemps -F 0 -out C skal returnere output: 0°F er -17.78°C
 	*/
 
 	// Definerer og initialiserer flagg-variablene
 	flag.Float64Var(&fahr, "F", 0.0, "temperatur i grader fahrenheit")
 	// Du må selv definere flag-variablene for "C" og "K"
-	flag.StringVar(&out, "out", "C", "beregne temperatur i C - 
-celsius, F - farhenheit, K- Kelvin")
-	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun 
-- Solen, luna - Månen og terra - Jorden")
-	// Du må selv definere flag-variabelen for -t flagget, som 
-bestemmer
+	flag.StringVar(&out, "out", "C", "beregne temperatur i C - celsius, F - farhenheit, K- Kelvin")
+	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun - Solen, luna - Månen og terra - Jorden")
+	// Du må selv definere flag-variabelen for -t flagget, som bestemmer
 	// hvilken temperaturskala skal brukes når funfacts skal vises
 	flag.Float64Var(&cels, "C", 0.0, "temperatur i grader Celsius")
 	flag.Float64Var(&kel, "K", 0.0, "temperatur i grader kelvin")
