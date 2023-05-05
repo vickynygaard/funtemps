@@ -164,7 +164,7 @@ func main() {
 		}
 
 	} else if out == "K" && isFlagPassed("F") {
-		kelvin := conv.FarhenheitToKevlin(fahr)
+		kelvin := conv.FahrenheitToKelvin(fahr)
 		if kelvin == math.Trunc(kelvin) {
 			kelvinInt := int(kelvin)
 			kelvinStr := strconv.FormatInt(int64(kelvinInt), 10)
