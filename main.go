@@ -110,7 +110,7 @@ func main() {
 		}
 
 	} else if out == "F" && isFlagPassed("C") {
-		farhenheit := conv.CelsiusToFarhenheit(cels)
+		farhenheit := conv.CelsiusToFahrenheit(cels)
 		if farhenheit == math.Trunc(farhenheit) {
 			farhenheitInt := int(farhenheit)
 			farhenheitStr := strconv.FormatInt(int64(farhenheitInt), 10)
@@ -128,7 +128,7 @@ func main() {
 		}
 
 	} else if out == "F" && isFlagPassed("K") {
-		farhenheit := conv.KelvinToFarhenheit(kel)
+		farhenheit := conv.KelvinToFahrenheit(kel)
 		if farhenheit == math.Trunc(farhenheit) {
 			farhenheitInt := int(farhenheit)
 			farhenheitStr := strconv.FormatInt(int64(farhenheitInt), 10)
