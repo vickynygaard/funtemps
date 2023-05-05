@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/vickynygaard/funtemps/conv"
+	"github.com/vickynygaard/funtemps/funfacts"
 	"math"
 	"strconv"
 )
